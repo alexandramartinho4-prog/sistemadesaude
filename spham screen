@@ -1,0 +1,7 @@
+<script>
+setTimeout(function() {
+    window.location.href = "login.html";
+}, 2000);
+</script>
+
+<h1>Processando...</h1>
