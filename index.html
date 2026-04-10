@@ -1,92 +1,59 @@
+
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Login - Saúde Domiciliar</title>
+    <title>Login Saúde Domiciliar</title>
 </head>
 
-<body style="
-  margin:0;
-  font-family: Arial, sans-serif;
-  background: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-  background-size: cover;
-">
+<body background="https://images.unsplash.com/photo-1586773860418-d37222d8fce3">
 
-  <!-- Camada para dar contraste na imagem -->
-  <div style="
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0, 40, 80, 0.35);
-  "></div>
+    <center>
 
-  <!-- Caixa do login -->
-  <div style="
-    position: relative;
-    width: 320px;
-    margin: 80px auto;
-    padding: 25px;
-    background: rgba(255,255,255,0.92);
-    border-radius: 12px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
-  ">
+        <br><br><br><br>
 
-    <h2 style="text-align:center; color:#0b3d91;">Login</h2>
+        <table bgcolor="white" cellpadding="20" border="1">
 
-    <!-- Nome -->
-    <label>Nome</label><br>
-    <input type="text" style="width:100%; padding:8px; margin-bottom:10px;"><br>
+            <tr>
+                <td align="center">
 
-    <!-- Email ou telefone -->
-    <label>E-mail ou Telefone</label><br>
-    <input type="text" style="width:100%; padding:8px; margin-bottom:10px;"><br>
+                    <h2>Login do Sistema de Saúde</h2>
 
-    <!-- Senha -->
-    <label>Senha</label><br>
-    <input type="password" style="width:100%; padding:8px; margin-bottom:10px;"><br>
+                    <form>
 
-    <!-- Tipo de utilizador -->
-    <label>Entrar como:</label><br>
-    <input type="radio" name="tipo"> Paciente<br>
-    <input type="radio" name="tipo"> Profissional<br>
-    <input type="radio" name="tipo"> Administrador<br><br>
+                        <label>Nome:</label><br>
+                        <input type="text" name="nome"><br><br>
 
-    <!-- Botão entrar -->
-    <button style="
-      width:100%;
-      padding:10px;
-      background:#0b3d91;
-      color:white;
-      border:none;
-      border-radius:6px;
-      cursor:pointer;
-    ">
-      Entrar
-    </button>
+                        <label>E-mail:</label><br>
+                        <input type="email" name="email"><br><br>
 
-    <br><br>
+                        <label>Senha:</label><br>
+                        <input type="password" name="senha"><br><br>
 
-    <!-- Criar conta -->
-    <button style="
-      width:100%;
-      padding:10px;
-      background:#ffffff;
-      color:#0b3d91;
-      border:2px solid #0b3d91;
-      border-radius:6px;
-      cursor:pointer;
-    ">
-      Criar Conta
-    </button>
+                        <label>Entrar como:</label><br>
+                        <select>
+                            <option>Paciente</option>
+                            <option>Profissional</option>
+                            <option>Administrador</option>
+                        </select>
 
-  </div>
+                        <br><br>
+
+                        <input type="submit" value="Entrar">
+                        <input type="button" value="Criar conta">
+
+                    </form>
+
+                </td>
+            </tr>
+
+        </table>
+
+    </center>
 
 </body>
 </html>
-       
-            
+
+   
 
 
 
