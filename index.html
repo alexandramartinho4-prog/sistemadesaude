@@ -1,51 +1,50 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-    <title>Login Saúde Domiciliar</title>
+    <meta charset="UTF-8">
+    <title>Login - Sistema de Saúde Domiciliar</title>
 </head>
 
-<body background="https://images.unsplash.com/photo-1586773860418-d37222d8fce3">
+<body background="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80">
 
     <center>
 
-        <br><br><br><br>
+        <h1>Sistema de Saúde Domiciliar</h1>
 
-        <table bgcolor="white" cellpadding="20" border="1">
+        <br><br>
 
+        <table border="1">
             <tr>
-                <td align="center">
-
-                    <h2>Login do Sistema de Saúde</h2>
+                <td>
+                    <h2>Login</h2>
 
                     <form>
 
                         <label>Nome:</label><br>
                         <input type="text" name="nome"><br><br>
 
-                        <label>E-mail:</label><br>
+                        <label>Email:</label><br>
                         <input type="email" name="email"><br><br>
 
                         <label>Senha:</label><br>
                         <input type="password" name="senha"><br><br>
 
                         <label>Entrar como:</label><br>
-                        <select>
-                            <option>Paciente</option>
-                            <option>Profissional</option>
-                            <option>Administrador</option>
+                        <select name="tipo">
+                            <option value="paciente">Paciente</option>
+                            <option value="profissional">Profissional</option>
+                            <option value="admin">Administrador</option>
                         </select>
 
                         <br><br>
 
                         <input type="submit" value="Entrar">
-                        <input type="button" value="Criar conta">
+                        <input type="button" value="Criar Conta">
 
                     </form>
 
                 </td>
             </tr>
-
         </table>
 
     </center>
@@ -53,9 +52,8 @@
 </body>
 </html>
 
-   
 
-
+      
 
 
 
