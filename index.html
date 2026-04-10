@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <title>Login - Saúde Domiciliar</title>
 </head>
-    
-<body>
-     <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3" alt="Hospital"style="width="100vw; height:100vh;object-fit:cover;">
-   <h2>Login</h2>
 
-<form>
-    <label>Nome:</label><br>
-    <input type="text"><br>
-ukuk.
-    <label>Email:</label><br>
-    <input type="email"><br>
+<body background="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80">
 
-    <label>Senha:</label><br>
-    <input type="password"><br>
-    <label>Tipo de usuário:</label><br>
-    <select name="usuário">
-    <option value="paciente">Paciente</option>
-    <option value="profissional">Profissional</option>
-        <option value="Administrador">Administrador</option>
-    </select><br><br>
-  
-    <button type="button" onclick="Entrar"()>Entrar</button>
+    <center>
 
-</form>
+        <h2>Sistema de Gestão de Saúde Domiciliar</h2>
+
+        <form>
+
+            <p>Nome:</p>
+            <input type="text" name="nome">
+
+            <p>E-mail:</p>
+            <input type="email" name="email">
+
+            <p>Senha:</p>
+            <input type="password" name="senha">
+
+            <p>Criar conta:</p>
+            <input type="checkbox"> Sim
+
+            <p>Entrar como:</p>
+            <input type="radio" name="tipo" value="paciente"> Paciente<br>
+            <input type="radio" name="tipo" value="profissional"> Profissional<br>
+            <input type="radio" name="tipo" value="admin"> Administrador
+
+            <br><br>
+
+            <input type="submit" value="Entrar">
+
+        </form>
+
+    </center>
 
 </body>
 </html>
