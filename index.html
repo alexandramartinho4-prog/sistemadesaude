@@ -1,61 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-    <title>Sistema de Saúde</title>
+    <meta charset="UTF-8">
+    <title>Login</title>
 </head>
 
-<body bgcolor="#1E90FF" style="margin:0; height:100%;">
+<body background="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80" align="center">
 
-<!-- 🟦 BOAS-VINDAS -->
-<div>
-    <center>
-        <h1>Sistema de Saúde</h1>
-        <h3>Bem-vindo ao sistema</h3>
+<br><br>
 
-        <p>Gerencie pacientes, profissionais e consultas</p>
+<h1>Login do Sistema</h1>
 
-        <hr width="60%">
-    </center>
-</div>
+<form>
 
+    <label>Nome:</label><br>
+    <input type="text"><br><br>
 
-<!-- 🟦 LOGIN -->
-<div>
-    <center>
+    <label>Email:</label><br>
+    <input type="email"><br><br>
 
-        <h2>Login</h2>
+    <label>Senha:</label><br>
+    <input type="password"><br><br>
 
-        <form>
+    <label>Entrar como:</label><br><br>
 
-            <label>Nome:</label><br>
-            <input type="text"><br><br>
+    <select id="tipo">
+        <option value="paciente">Paciente</option>
+        <option value="profissional">Profissional</option>
+        <option value="admin">Administrador</option>
+    </select>
 
-            <label>Email:</label><br>
-            <input type="email"><br><br>
+    <br><br>
 
-            <label>Senha:</label><br>
-            <input type="password"><br><br>
+    <!-- BOTÃO FUNCIONAL SEM CSS (usa JS simples) -->
+    <button type="button" onclick="entrar()">Entrar</button>
 
-            <p><b>Entrar como:</b></p>
+</form>
 
-            <!-- BOTÕES (SEM LINKS) -->
-            <button type="button">Paciente</button>
-            <button type="button">Profissional</button>
-            <button type="button">Administrador</button>
+<br>
 
-            <br><br>
+<a href="#">Esqueci a minha senha</a><br><br>
 
-            <button type="submit">Entrar</button>
+<button>Criar Conta</button>
 
-            <br><br>
+<script>
+function entrar() {
+    var tipo = document.getElementById("tipo").value;
 
-            <button type="button">Esqueci a senha</button>
-            <button type="button">Criar conta</button>
+    if (tipo == "paciente") {
+        window.location.href = "paciente.html";
+    }
 
-        </form>
+    if (tipo == "profissional") {
+        window.location.href = "profissional.html";
+    }
 
-    </center>
-</div>
+    if (tipo == "admin") {
+        window.location.href = "admin.html";
+    }
+}
+</script>
 
 </body>
 </html>
