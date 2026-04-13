@@ -8,21 +8,25 @@
 <body background="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80">
 
 <!-- BOAS-VINDAS -->
-<div id="boasvindas" align="center" style="background-color:#0d6efd; color:white; padding:50px; height:100vh;">
+<div id="boasvindas" align="center"
+style="background-color:#0d6efd; color:white; height:100vh; padding-top:120px;">
 
     <h1>Sistema de Gestão de Saúde</h1>
 
     <p>Bem-vindo ao sistema</p>
 
-    <h3>Serviços</h3>
-    <p>✔ Consultas</p>
+    <h3>Nossos Serviços</h3>
+    <p>✔ Marcação de consultas</p>
     <p>✔ Gestão de pacientes</p>
     <p>✔ Histórico médico</p>
+    <p>✔ Atendimento rápido</p>
 
     <br><br>
 
-    <button onclick="document.getElementById('boasvindas').style.display='none';
-                     document.getElementById('login').style.display='block';">
+    <button onclick="
+        document.getElementById('boasvindas').style.display='none';
+        document.getElementById('login').style.display='block';
+    ">
         Entrar no Sistema
     </button>
 
@@ -36,17 +40,17 @@
     <form>
 
         <label>Nome:</label><br>
-        <input type="text" name="nome"><br><br>
+        <input type="text"><br><br>
 
         <label>Email:</label><br>
-        <input type="email" name="email"><br><br>
+        <input type="email"><br><br>
 
         <label>Senha:</label><br>
-        <input type="password" name="senha"><br><br>
+        <input type="password"><br><br>
 
         <label>Entrar como:</label><br><br>
 
-        <select name="tipo">
+        <select>
             <option value="paciente">Paciente</option>
             <option value="profissional">Profissional</option>
             <option value="admin">Administrador</option>
@@ -54,24 +58,30 @@
 
         <br><br>
 
-        <!-- BOTÕES SIMPLES -->
-        <p><a href="paciente.html">Entrar</a></p>
-
-        <p><a href="profissional.html">Entrar como Profissional</a></p>
-
-        <p><a href="admin.html">Entrar como Administrador</a></p>
-
-        <br>
-
-        <button type="button">Criar Conta</button>
-
     </form>
+
+    <!-- BOTÕES DE ENTRADA -->
+    <p><a href="paciente.html">Entrar como Paciente</a></p>
+    <p><a href="profissional.html">Entrar como Profissional</a></p>
+    <p><a href="admin.html">Entrar como Administrador</a></p>
+
+    <br>
+
+    <a href="#">Esqueci a minha senha</a>
+
+    <br><br>
+
+    <button>Criar Conta</button>
 
 </div>
 
 </body>
 </html>
 
+    
+
+        
+        
    
 
 
