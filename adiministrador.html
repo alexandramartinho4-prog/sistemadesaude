@@ -1,11 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-    <title>Admin</title>
+    <meta charset="UTF-8">
+    <title>Painel do Administrador</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+        }
+
+        .container {
+            width: 75%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #6f42c1;
+        }
+
+        .info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 10px;
+            width: 30%;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #6f42c1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .menu a:hover {
+            background-color: #5a35a0;
+        }
+
+        .sair {
+            margin-top: 20px;
+            display: inline-block;
+            color: red;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #e9ecef;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>FUNCIONA ADMIN</h1>
+<div class="container">
+
+    <h1>Painel do Administrador</h1>
+
+    <div class="info">
+        <p><strong>Nome:</strong> Administrador</p>
+        <p><strong>Nível de Acesso:</strong> Total</p>
+    </div>
+
+    <!-- RESUMO DO SISTEMA -->
+    <div class="cards">
+        <div class="card">
+            <h3>Pacientes</h3>
+            <p>120</p>
+        </div>
+
+        <div class="card">
+            <h3>Profissionais</h3>
+            <p>15</p>
+        </div>
+
+        <div class="card">
+            <h3>Consultas Hoje</h3>
+            <p>32</p>
+        </div>
+    </div>
+
+    <!-- TABELA DE UTILIZADORES -->
+    <h3>Utilizadores do Sistema</h3>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+        </tr>
+        <tr>
+            <td>João Silva</td>
+            <td>Paciente</td>
+            <td>Ativo</td>
+        </tr>
+        <tr>
+            <td>Dra. Ana Costa</td>
+            <td>Profissional</td>
+            <td>Ativo</td>
+        </tr>
+    </table>
+
+    <!-- MENU -->
+    <div class="menu">
+        <a href="#">Gerir Pacientes</a>
+        <a href="#">Gerir Profissionais</a>
+        <a href="#">Gerir Consultas</a>
+        <a href="#">Relatórios</a>
+    </div>
+
+    <a class="sair" href="index.html">Sair</a>
+
+</div>
 
 </body>
 </html>
