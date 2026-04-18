@@ -6,31 +6,74 @@
     </head>
 <body>
 
-<h1>Login</h1>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<form>
-    <label>Nome:</label><br>
-    <input type="text"><br>
+        body {
+            height: 100vh;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    <label>Email:</label><br>
-    <input type="email"><br>
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
 
-    <label>Senha:</label><br>
-    <input type="password"><br>
-    <label>Tipo de usuário:</label><br>
-    <select name="usuário">
-    <option value="paciente">Paciente</option>
-    <option value="profissional">Profissional</option>
-        <option value="Administrador">Administrador</option>
-    </select><br><br>
-  
-    <button type="button" onclick="Entrar"()>Entrar</button>
+        h1 {
+            margin-bottom: 15px;
+            color: #333;
+        }
 
+        p {
+            margin-bottom: 25px;
+            color: #666;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #4facfe;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bem-vindo ao Sistema</h1>
+    <p>Estamos felizes em ter você aqui!</p>
+    <button onclick="entrar()">Entrar</button>
+</div>
+
+<script>
+    function entrar() {
+        alert("Entrando no sistema...");
+        // aqui você pode redirecionar depois
+        // window.location.href = "login.html";
+    }
+</script>
 
 </body>
 </html>
-
-
 
 
 
