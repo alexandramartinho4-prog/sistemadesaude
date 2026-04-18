@@ -1,191 +1,156 @@
-<style>
-       body {
-     background-color: #0d6efd;
-    text-align: center;
-        
+/* =======================
+   ESTILO GERAL DO SITE
+======================= */
 
-    .caixa 
-    background-color: white;
-     width: 250px;
-    margin: auto;
-     padding: 15px;
-        }
-   </style>
-     <style>
-        body {
+body {
     font-family: Arial, sans-serif;
- background-color: #f4f6f8;
-text-align: center;
-        }
+    background-color: #f4f6f8;
+    text-align: center;
+}
 
- .container {
- width: 60%;
-margin: auto;
- background: white;
- padding: 20px;
- margin-top: 40px;
- border-radius: 10px;
-        }
+/* Caixa genérica */
+.container {
+    width: 70%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
 
-        h1 {
-            color: #0d6efd;
-        }
+/* =======================
+   TÍTULOS POR PÁGINA
+======================= */
 
-        .info {
-            text-align: left;
-            margin-bottom: 20px;
-        }
+h1 {
+    color: #0d6efd;
+}
 
-        .menu a {
-            display: block;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #0d6efd;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+/* Paciente */
+.paciente h1 {
+    color: #198754;
+}
 
-        .menu a:hover {
-            background-color: #0b5ed7;
-        }
+/* Administrador */
+.admin h1 {
+    color: #6f42c1;
+}
 
-        .sair {
-            margin-top: 20px;
-            display: inline-block;
-            color: red;
-        }
-    </style>
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            text-align: center;
-        }
+/* Profissional */
+.profissional h1 {
+    color: #0d6efd;
+}
 
-        .container {
-            width: 70%;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
+/* Login (caixa simples) */
+.caixa {
+    background-color: white;
+    width: 250px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+}
 
-        h1 {
-            color: #198754;
-        }
+/* =======================
+   INFO DO PERFIL
+======================= */
 
-        .info {
-            text-align: left;
-            margin-bottom: 20px;
-        }
+.info {
+    text-align: left;
+    margin-bottom: 20px;
+}
 
-        .menu a {
-            display: block;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #198754;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+/* =======================
+   MENUS
+======================= */
 
-        .menu a:hover {
-            background-color: #157347;
-        }
+.menu a {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-        .sair {
-            margin-top: 20px;
-            display: inline-block;
-            color: red;
-        }
+/* cores por página */
+.paciente .menu a {
+    background-color: #198754;
+}
 
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
+.paciente .menu a:hover {
+    background-color: #157347;
+}
 
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-        }
+.admin .menu a {
+    background-color: #6f42c1;
+}
 
-        th {
-            background-color: #e9ecef;
-        }
-    </style>
- <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            text-align: center;
-        }
+.admin .menu a:hover {
+    background-color: #5a35a0;
+}
 
-        .container {
-            width: 75%;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
+.profissional .menu a {
+    background-color: #0d6efd;
+}
 
-        h1 {
-            color: #6f42c1;
-        }
+.profissional .menu a:hover {
+    background-color: #0b5ed7;
+}
 
-        .info {
-            text-align: left;
-            margin-bottom: 20px;
-        }
+/* sair */
+.sair {
+    margin-top: 20px;
+    display: inline-block;
+    color: red;
+}
 
-        .cards {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
+/* =======================
+   TABELAS
+======================= */
 
-        .card {
-            background-color: #e9ecef;
-            padding: 15px;
-            border-radius: 10px;
-            width: 30%;
-        }
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
 
-        .menu a {
-            display: block;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #6f42c1;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
 
-        .menu a:hover {
-            background-color: #5a35a0;
-        }
+th {
+    background-color: #e9ecef;
+}
 
-        .sair {
-            margin-top: 20px;
-            display: inline-block;
-            color: red;
-        }
+/* =======================
+   CARDS (admin)
+======================= */
 
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
 
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-        }
+.card {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+}
 
-        th {
-            background-color: #e9ecef;
-        }
-    </style>
+      
+       
+           
+
+        
+        
+       
+      
+
+      
+            
+
+       
+           
