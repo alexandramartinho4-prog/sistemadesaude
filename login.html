@@ -2,54 +2,139 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-<link rel="stylesheet" href="../CSS/style.css">
 
-   </head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-   <body>
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg, #dff6ff, #4facfe);
+        }
 
-  <br><br><br>
-       
+        .caixa{
+            width: 360px;
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom: 20px;
+            color:#1b6ca8;
+        }
+
+        label{
+            font-size: 14px;
+            color:#333;
+        }
+
+        input, select{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            margin-bottom:15px;
+            border:1px solid #cfd8dc;
+            border-radius:10px;
+            outline:none;
+            transition:0.3s;
+        }
+
+        input:focus, select:focus{
+            border-color:#4facfe;
+            box-shadow:0 0 5px rgba(79,172,254,0.5);
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn-login{
+            background:#1b6ca8;
+            color:white;
+            margin-top:5px;
+        }
+
+        .btn-login:hover{
+            background:#144d75;
+        }
+
+        .btn-criar{
+            background:#00c6a9;
+            color:white;
+            margin-top:10px;
+        }
+
+        .btn-criar:hover{
+            background:#00a88f;
+        }
+
+        a{
+            display:block;
+            text-align:center;
+            margin-top:15px;
+            color:#1b6ca8;
+            text-decoration:none;
+            font-size: 13px;
+        }
+
+        a:hover{
+            text-decoration:underline;
+        }
+    </style>
+</head>
+
+<body>
+
 <div class="caixa">
 
-      <h2>Login</h2>
+    <h2>Login</h2>
 
-        <form>
+    <form>
 
-        <label>Nome:</label><br>
-        <input type="text"><br><br>
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Digite o seu email">
 
-        <label>Email:</label><br>
-        <input type="email"><br><br>
+        <label>Senha:</label>
+        <input type="password" id="senha" placeholder="Digite a sua senha">
 
-        <label>Senha:</label><br>
-        <input type="password"><br><br>
-
-        <label>Entrar como:</label><br>
-
+        <label>Entrar como:</label>
         <select id="tipo">
             <option value="paciente">Paciente</option>
             <option value="profissional">Profissional</option>
             <option value="admin">Administrador</option>
         </select>
 
-        <br><br>
-
-        <button type="button" onclick="entrar()">Entrar</button>
+        <button type="button" class="btn-login" onclick="entrar()">Entrar</button>
 
     </form>
 
-    <br>
+    <a href="#">Esqueci a minha senha</a>
 
-    <a href="#">Esqueci a minha senha</a><br><br>
-
-    <button>Criar Conta</button>
+    <button class="btn-criar">Criar Conta</button>
 
 </div>
 
-    <script> 
-    function entrar() {
+<script>
+function entrar() {
     var tipo = document.getElementById("tipo").value;
 
     if (tipo == "paciente") {
@@ -63,27 +148,8 @@
     if (tipo == "admin") {
         window.location.href = "admin.html";
     }
-      }
-        </script>
+}
+</script>
 
-       </body>
-       </html>
-
-  
-
-
-        
-        
-   
-
-
-                     
-
-
-          
-
-
-
-
-
-
+</body>
+</html>
