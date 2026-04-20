@@ -1,156 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+<meta charset="UTF-8">
+<title>Login - Sistema de Saúde</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-        body{
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background: linear-gradient(135deg, #dff6ff, #4facfe);
-        }
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #dff6ff, #4facfe);
+    }
 
-        .caixa{
-            width: 360px;
-            background: rgba(255,255,255,0.95);
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            backdrop-filter: blur(10px);
-        }
+    .login-box {
+        width: 350px;
+        padding: 30px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
 
-        h2{
-            text-align:center;
-            margin-bottom: 20px;
-            color:#1b6ca8;
-        }
+    .login-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
 
-        label{
-            font-size: 14px;
-            color:#333;
-        }
+    .input-box {
+        margin-bottom: 15px;
+    }
 
-        input, select{
-            width:100%;
-            padding:10px;
-            margin-top:5px;
-            margin-bottom:15px;
-            border:1px solid #cfd8dc;
-            border-radius:10px;
-            outline:none;
-            transition:0.3s;
-        }
+    .input-box input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+    }
 
-        input:focus, select:focus{
-            border-color:#4facfe;
-            box-shadow:0 0 5px rgba(79,172,254,0.5);
-        }
+    .btn {
+        width: 100%;
+        padding: 12px;
+        background: #4facfe;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
 
-        button{
-            width:100%;
-            padding:12px;
-            border:none;
-            border-radius:10px;
-            cursor:pointer;
-            font-weight:bold;
-            transition:0.3s;
-        }
+    .btn:hover {
+        background: #2196f3;
+    }
 
-        .btn-login{
-            background:#1b6ca8;
-            color:white;
-            margin-top:5px;
-        }
+    .link {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
 
-        .btn-login:hover{
-            background:#144d75;
-        }
+    .link a {
+        color: #4facfe;
+        text-decoration: none;
+    }
 
-        .btn-criar{
-            background:#00c6a9;
-            color:white;
-            margin-top:10px;
-        }
-
-        .btn-criar:hover{
-            background:#00a88f;
-        }
-
-        a{
-            display:block;
-            text-align:center;
-            margin-top:15px;
-            color:#1b6ca8;
-            text-decoration:none;
-            font-size: 13px;
-        }
-
-        a:hover{
-            text-decoration:underline;
-        }
-    </style>
- <link rel="stylesheet" href="CSS/login.css">
-    </head>
+</style>
+</head>
 
 <body>
 
-<div class="caixa">
+<div class="login-box">
+    <h2>Entrar no Sistema</h2>
 
-    <h2>Login</h2>
+    <div class="input-box">
+        <input type="email" placeholder="Email">
+    </div>
 
-    <form>
+    <div class="input-box">
+        <input type="password" placeholder="Senha">
+    </div>
 
-        <label>Email:</label>
-        <input type="email" id="email" placeholder="Digite o seu email">
+    <button class="btn">Entrar</button>
 
-        <label>Senha:</label>
-        <input type="password" id="senha" placeholder="Digite a sua senha">
-
-        <label>Entrar como:</label>
-        <select id="tipo">
-            <option value="paciente">Paciente</option>
-            <option value="profissional">Profissional</option>
-            <option value="admin">administrador</option>
-        </select>
-
-        <button type="button" class="btn-login" onclick="entrar()">Entrar</button>
-
-    </form>
-
-    <a href="#">Esqueci a minha senha</a>
-
-    <button class="btn-criar">Criar Conta</button>
-
+    <div class="link">
+        Não tens conta? <a href="#">Criar conta</a>
+    </div>
 </div>
-
-<script>
-function entrar() {
-    var tipo = document.getElementById("tipo").value;
-
-    if (tipo == "paciente") {
-        window.location.href = "paciente.html";
-    }
-
-    if (tipo == "profissional") {
-        window.location.href = "profissional.html";
-    }
-
-    if (tipo == "admin") {
-        window.location.href = "admin.html";
-    }
-}
-</script>
 
 </body>
 </html>
