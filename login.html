@@ -94,6 +94,33 @@
         Não tens conta? <a href="#">Criar conta</a>
     </div>
 </div>
+   <script>
+function entrar() {
+    let email = document.getElementById("email").value;
+    let senha = document.getElementById("senha").value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let user = users.find(u => u.email === email && u.senha === senha);
+
+    if (!user) {
+        alert("Email ou senha incorretos!");
+        return;
+    }
+
+    alert("Bem-vindo " + user.nome);
+
+    // guardar sessão
+    localStorage.setItem("usuarioLogado", JSON.stringify(user));
+
+    // redirecionar por tipo
+    if (user.tipo === "profissional") {
+        window.location.href = "profissional.html";
+    } else {
+        window.location.href = "paciente.html";
+    }
+}
+</script>
 
 </body>
 </html>
