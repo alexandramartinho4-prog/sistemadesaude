@@ -115,10 +115,8 @@ function entrar() {
 
     alert("Bem-vindo, " + user.nome);
 
-    // guardar sessão do utilizador logado
     localStorage.setItem("usuarioLogado", JSON.stringify(user));
 
-    // redirecionamento por tipo
     if (user.tipo === "profissional") {
         window.location.href = "profissional.html";
     } else {
