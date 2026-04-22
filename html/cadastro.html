@@ -41,7 +41,6 @@
         border-radius: 8px;
         border: 1px solid #ccc;
         outline: none;
-        transition: 0.3s;
     }
 
     input:focus, select:focus {
@@ -58,7 +57,6 @@
         color: white;
         font-size: 16px;
         cursor: pointer;
-        transition: 0.3s;
     }
 
     button:hover {
@@ -81,27 +79,46 @@
 <body>
 
 <div class="container">
+
     <h2>Criar Conta</h2>
 
     <form>
+
         <input type="text" placeholder="Nome completo" required>
         <input type="email" placeholder="Email" required>
         <input type="password" placeholder="Senha" required>
 
-        <select required>
+        <select id="tipoUser" required>
             <option value="">Selecione o tipo de usuário</option>
-            <option>Médico</option>
-            <option>paciente</option>
-           
-            </select>
+            <option value="medico">Médico</option>
+            <option value="paciente">Paciente</option>
+        </select>
 
-        <button type="submit">Cadastrar</button>
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+
     </form>
 
     <div class="link">
         <a href="login.html">Já tenho conta</a>
     </div>
+
 </div>
+
+<script>
+function cadastrar() {
+    let tipo = document.getElementById("tipoUser").value;
+
+    if (tipo === "paciente") {
+        window.location.href = "paciente.html";
+    } 
+    else if (tipo === "medico") {
+        window.location.href = "medico.html";
+    } 
+    else {
+        alert("Escolhe o tipo de usuário");
+    }
+}
+</script>
 
 </body>
 </html>
