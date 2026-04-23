@@ -1,83 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Sistema de Gestão de Saúde</title>
+<meta charset="UTF-8">
+<title>Sistema de Gestão de Saúde</title>
 
-    <style>
-        body {
-            background-color: rgb(191, 242, 255);
-            font-family: Arial, sans-serif;
-        }
+<style>
+    body {
+        font-family: Arial;
+        background: linear-gradient(to right, #bff2ff, #e6f7ff);
+        margin: 0;
+        padding: 30px;
+        text-align: center;
+        color: #1f2d3d;
+    }
 
-        .card {
-            max-width: 800px;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
+    ul {
+        display: inline-block;
+        text-align: left;
+        line-height: 1.8;
+    }
 
-        .buttons {
-            margin-top: 20px;
-        }
+    button {
+        padding: 10px 15px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-        button {
-            padding: 10px 15px;
-            margin-right: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    .enter {
+        background: #2c3e50;
+        color: white;
+    }
 
-        .btn-enter {
-            background: #2c3e50;
-            color: white;
-        }
-
-        .btn-info {
-            background: #3498db;
-            color: white;
-        }
-    </style>
+    .info {
+        background: #3498db;
+        color: white;
+    }
+</style>
 </head>
 
 <body>
 
-<div class="card">
+<h1>🏥 Sistema de Gestão de Saúde</h1>
 
-    <h1>🏥 Sistema de Gestão de Saúde</h1>
-    <p>Bem-vindo ao portal oficial de atendimento e gestão hospitalar</p>
+<p>
+Este sistema ajuda na organização de consultas, registo de pacientes e gestão de médicos de forma simples e rápida.
+</p>
 
-    <h3>Sobre o sistema</h3>
-    <p>
-        Este sistema foi desenvolvido para melhorar a organização e qualidade
-        dos serviços de saúde.
-    </p>
+<p>
+O objetivo é melhorar o atendimento hospitalar e facilitar o acesso aos serviços de saúde.
+</p>
 
-    <h3>Funcionalidades</h3>
-    <ul>
-        <li>Registo de pacientes</li>
-        <li>Agendamento de consultas</li>
-        <li>Histórico clínico</li>
-        <li>Gestão de médicos</li>
-    </ul>
+<h3>Serviços</h3>
 
-    <div class="buttons">
-        <button class="btn-enter" onclick="entrar()">Entrar no Sistema</button>
-        <button class="btn-info" onclick="info()">Mais informações</button>
-    </div>
+<ul>
+    <li>Registo de pacientes</li>
+    <li>Agendamento de consultas</li>
+    <li>Histórico clínico</li>
+    <li>Gestão de médicos</li>
+</ul>
 
-</div>
+<br>
+
+<button class="enter" onclick="entrar()">Entrar no Sistema</button>
+<button class="info" onclick="info()">Mais informações</button>
 
 <script>
-    function entrar() {
-        window.location.href = "login.html";
-    }
+function entrar() {
+    window.location.href = "login.html";
+}
 
-    function info() {
-        window.location.href = "info.html";
-    }
+function info() {
+    window.location.href = "info.html";
+}
 </script>
 
 </body>
