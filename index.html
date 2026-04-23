@@ -2,39 +2,42 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<title>Sistema de Gestão de Saúde</title>
+<title>Bem-vindo - Sistema de Saúde</title>
 
 <style>
     body {
-        font-family: Arial;
-        background: linear-gradient(to right, #bff2ff, #e6f7ff);
         margin: 0;
-        padding: 30px;
-        text-align: center;
-        color: #1f2d3d;
+        font-family: Arial;
+        background: #e6f7ff;
+        display: flex;
+        
+    .left {
+        width: 30%;
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
     }
 
-    ul {
-        display: inline-block;
-        text-align: left;
-        line-height: 1.8;
+    .left h2 {
+        margin-top: 0;
     }
+  }
 
     button {
         padding: 10px 15px;
-        margin: 10px;
+        margin: 10px 5px;
         border: none;
-        border-radius: 5px;
         cursor: pointer;
+        border-radius: 5px;
     }
 
     .enter {
-        background: #2c3e50;
+        background: #3498db;
         color: white;
     }
 
     .info {
-        background: #3498db;
+        background: #1abc9c;
         color: white;
     }
 </style>
@@ -42,36 +45,38 @@
 
 <body>
 
-<h1>🏥 Sistema de Gestão de Saúde</h1>
+<div class="left">
+    <h2>🏥 Sistema de Saúde</h2>
+    <p>Gestão hospitalar moderna</p>
 
-<p>
-Este sistema ajuda na organização de consultas, registo de pacientes e gestão de médicos de forma simples e rápida.
-</p>
+    <p>✔ Pacientes<br>
+       ✔ Consultas<br>
+       ✔ Médicos<br>
+       ✔ Histórico clínico</p>
+</div>
 
-<p>
-O objetivo é melhorar o atendimento hospitalar e facilitar o acesso aos serviços de saúde.
-</p>
+<div class="right">
+    <h1>Bem-vindo</h1>
 
-<h3>Serviços</h3>
+    <p>
+        Este sistema foi criado para organizar serviços de saúde,
+        melhorar o atendimento e facilitar o acesso a informações médicas.
+    </p>
 
-<ul>
-    <li>Registo de pacientes</li>
-    <li>Agendamento de consultas</li>
-    <li>Histórico clínico</li>
-    <li>Gestão de médicos</li>
-</ul>
+    <p>
+        Aqui podes gerir consultas, pacientes e médicos de forma rápida e eficiente.
+    </p>
 
-<br>
-
-<button class="enter" onclick="entrar()">Entrar no Sistema</button>
-<button class="info" onclick="info()">Mais informações</button>
+    <button class="enter" onclick="entrar()">Entrar no Sistema</button>
+    <button class="info" onclick="info()">Mais informações</button>
+</div>
 
 <script>
-function entrar() {
+function entrar(){
     window.location.href = "login.html";
 }
 
-function info() {
+function info(){
     window.location.href = "info.html";
 }
 </script>
