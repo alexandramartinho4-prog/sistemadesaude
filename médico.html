@@ -1,69 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Painel do Médico</title>
+<meta charset="UTF-8">
+<title>Painel do Médico</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: lightblue;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+        background: #e6f7ff;
+        display: flex;
+        height: 100vh;
+    }
 
-        h1 {
-            margin-top: 20px;
-        }
+    /* MENU LATERAL */
+    .menu {
+        width: 250px;
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+    }
 
-        .info {
-            margin: 20px;
-        }
+    .menu h2 {
+        margin-top: 0;
+    }
 
-        button {
-            display: block;
-            margin: 15px auto;
-            padding: 12px;
-            width: 220px;
-            border: none;
-            border-radius: 8px;
-            background-color: #28a745;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    .menu p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
 
-        button:hover {
-            background-color: #1e7e34;
-            transform: scale(1.05);
-        }
+    /* CONTEÚDO */
+    .content {
+        flex: 1;
+        padding: 30px;
+    }
 
-        .sair {
-            background-color: #dc3545;
-        }
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
 
-        .sair:hover {
-            background-color: #a71d2a;
-        }
-    </style>
+    button {
+        padding: 10px 15px;
+        margin: 8px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .btn {
+        background: #28a745;
+        color: white;
+    }
+
+    .btn:hover {
+        background: #1e7e34;
+    }
+
+    .danger {
+        background: #dc3545;
+        color: white;
+    }
+
+    .danger:hover {
+        background: #a71d2a;
+    }
+</style>
 </head>
 
 <body>
 
+<!-- MENU ESQUERDO -->
+<div class="menu">
+    <h2>👨‍⚕️ Médico</h2>
+    <p>Dr. Ofrania Martinho</p>
+    <p>Clínica Geral</p>
+    <hr>
+    <p>✔ Pacientes<br>
+       ✔ Consultas<br>
+       ✔ Diagnósticos<br>
+       ✔ Histórico</p>
+</div>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<div class="content">
+
     <h1>Painel do Médico</h1>
 
-    <div class="info">
-        <p>Nome: Dr. Ofrania Martinho</p>
-        <p>Especialidade: Clínica Geral</p>
+    <div class="card">
+        <h3>Atalhos rápidos</h3>
+
+        <button class="btn" onclick="alert('Lista de pacientes')">Ver Pacientes</button>
+        <button class="btn" onclick="alert('Consultas do dia')">Consultas do Dia</button>
+        <button class="btn" onclick="alert('Adicionar diagnóstico')">Adicionar Diagnóstico</button>
+        <button class="btn" onclick="alert('Histórico')">Histórico</button>
     </div>
 
-    <button onclick="alert('Lista de pacientes')">Ver pacientes</button>
-    <button onclick="alert('Consultas de hoje')">Consultas do dia</button>
-    <button onclick="alert('Adicionar diagnóstico')">Adicionar diagnóstico</button>
-    <button onclick="alert('Histórico')">Histórico dos pacientes</button>
-    <button class="sair" onclick="alert('Saiu')">Sair</button>
+    <div class="card">
+        <h3>Sessão</h3>
+        <button class="danger" onclick="sair()">Sair</button>
+    </div>
+
+</div>
+
+<script>
+function sair(){
+    window.location.href = "login.html";
+}
+</script>
 
 </body>
 </html>
