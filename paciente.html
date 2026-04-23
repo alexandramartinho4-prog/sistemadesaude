@@ -1,27 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> paciente</title>
-    </head>
+    <title>Paciente</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: white;
+            padding: 20px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .botoes {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
-    <h1>painel do Paciente</h1>
+
+    <h1>Painel do Paciente</h1>
 
     <div class="header">
-        <p>nome: Ofrania Martinho</p>
-        <p>idade:30 anos</p>
-        <data value="10/10/2002"></data>
-    <style>
-     margin 0
-     pedding 0
-     beckground: color:blue
-      </style>
+        <p>Nome: Ofrania Martinho</p>
+        <p>Idade: 30 anos</p>
+        <p>Data de nascimento: 10/10/2002</p>
+    </div>
 
-    <button>marcar consultas</button>
-    <button>ver historico do medico</button>
-    <button>minhas consultas</button>
-    <button>sair</button>
+    <div class="botoes">
+        <button>Marcar consultas</button>
+        <button>Ver histórico do médico</button>
+        <button>Minhas consultas</button>
+        <button>Sair</button>
+    </div>
+
 </body>
 </html>
-
