@@ -2,12 +2,42 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Sistema de gestão de Saúde</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <title>Sistema de Gestão de Saúde</title>
 
     <style>
         body {
             background-color: rgb(191, 242, 255);
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-enter {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .btn-info {
+            background: #3498db;
+            color: white;
         }
     </style>
 </head>
@@ -17,39 +47,26 @@
 <div class="card">
 
     <h1>🏥 Sistema de Gestão de Saúde</h1>
-    <p class="subtitle">Bem-vindo ao portal oficial de atendimento e gestão hospitalar</p>
+    <p>Bem-vindo ao portal oficial de atendimento e gestão hospitalar</p>
 
-    <div class="info">
-        <h3>Sobre o sistema</h3>
-        <p>
-            Este sistema foi desenvolvido para melhorar a organização, rapidez e qualidade
-            dos serviços de saúde, facilitando o atendimento aos pacientes e o trabalho dos profissionais.
-        </p>
+    <h3>Sobre o sistema</h3>
+    <p>
+        Este sistema foi desenvolvido para melhorar a organização e qualidade
+        dos serviços de saúde.
+    </p>
 
-        <h3>Funcionalidades</h3>
-        <ul>
-            <p>Registo e gestão de pacientes</p>
-            <p>Agendamento de consultas</p>
-            <p>Histórico clínico digital</p>
-            <p>Controlo de atendimentos</p>
-            <p>Gestão de profissionais de saúde</p>
-        </ul>
-
-        <h3>Objetivo</h3>
-        <p>
-            Garantir um atendimento mais rápido, organizado e eficiente, promovendo qualidade
-            nos serviços hospitalares.
-        </p>
-    </div>
+    <h3>Funcionalidades</h3>
+    <ul>
+        <li>Registo de pacientes</li>
+        <li>Agendamento de consultas</li>
+        <li>Histórico clínico</li>
+        <li>Gestão de médicos</li>
+    </ul>
 
     <div class="buttons">
         <button class="btn-enter" onclick="entrar()">Entrar no Sistema</button>
         <button class="btn-info" onclick="info()">Mais informações</button>
     </div>
-
-    <footer>
-        © 2026 Sistema de Gestão de Saúde - Todos os direitos reservados
-    </footer>
 
 </div>
 
@@ -59,14 +76,9 @@
     }
 
     function info() {
-        alert("Sistema de saúde desenvolvido para gestão hospitalar moderna.");
+        window.location.href = "info.html";
     }
 </script>
 
 </body>
 </html>
-
-   
-
-   
-
