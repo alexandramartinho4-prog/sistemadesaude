@@ -1,60 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Paciente</title>
+<meta charset="UTF-8">
+<title>Painel do Paciente</title>
 
-    
-</head>
-<body>
-
-    <h1>Painel do Paciente</h1>
-    <style>
+<style>
     body {
         margin: 0;
-        padding: 0;
-        background-color: lightblue;
-        font-family: Arial, sans-serif;
-        text-align: center;
+        font-family: Arial;
+        background: #e6f7ff;
+        display: flex;
+        height: 100vh;
     }
 
-    .header {
+    /* MENU ESQUERDO */
+    .menu {
+        width: 250px;
+        background: #007BFF;
+        color: white;
         padding: 20px;
     }
 
-    h1 {
-        margin-top: 20px;
+    .menu h2 {
+        margin-top: 0;
+    }
+
+    .menu p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* CONTEÚDO */
+    .content {
+        flex: 1;
+        padding: 30px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     button {
-        display: block;
-        margin: 15px auto;
-        padding: 12px;
-        width: 200px;
+        padding: 10px 15px;
+        margin: 8px;
         border: none;
-        border-radius: 8px;
-        background-color: #007BFF;
-        color: white;
-        font-size: 16px;
+        border-radius: 6px;
         cursor: pointer;
+        background: #007BFF;
+        color: white;
         transition: 0.3s;
     }
 
     button:hover {
-        background-color: #0056b3;
+        background: #0056b3;
+    }
+
+    .sair {
+        background: #dc3545;
+    }
+
+    .sair:hover {
+        background: #a71d2a;
     }
 </style>
+</head>
 
-    <div class="header">
-        <p>Nome: Ofrania Martinho</p>
-        <p>Idade: 30 anos</p>
-        <p>Data de nascimento: 10/10/2002</p>
+<body>
+
+<!-- MENU ESQUERDO -->
+<div class="menu">
+    <h2>🧑‍⚕️ Paciente</h2>
+    <p>Ofrania Martinho</p>
+    <p>30 anos</p>
+    <p>Nascimento: 10/10/2002</p>
+    <hr>
+    <p>✔ Consultas<br>
+       ✔ Histórico<br>
+       ✔ Médicos<br>
+       ✔ Marcação</p>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="content">
+
+    <h1>Painel do Paciente</h1>
+
+    <div class="card">
+        <h3>Ações rápidas</h3>
+
+        <button onclick="alert('Marcar consulta')">Marcar Consulta</button>
+        <button onclick="alert('Ver histórico')">Histórico Médico</button>
+        <button onclick="alert('Minhas consultas')">Minhas Consultas</button>
     </div>
 
-    <button>Marcar consultas</button>
-    <button>Ver histórico do médico</button>
-    <button>Minhas consultas</button>
-    <button>Sair</button>
+    <div class="card">
+        <h3>Conta</h3>
+        <button class="sair" onclick="sair()">Sair</button>
+    </div>
+
+</div>
+
+<script>
+function sair(){
+    window.location.href = "login.html";
+}
+</script>
 
 </body>
 </html>
