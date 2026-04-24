@@ -2,116 +2,189 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Painel do Médico</title>
 
 <style>
-    body {
+    * {
         margin: 0;
-        font-family: Arial;
-        background: #e6f7ff;
-        display: flex;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
         height: 100vh;
     }
 
-    /* MENU LATERAL */
-    .menu {
-        width: 250px;
-        background: #2c3e50;
-        color: white;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        height: calc(100vh - 80px);
+    }
+
+    .sidebar {
+        background: rgba(0,0,0,0.3);
         padding: 20px;
+        border-right: 1px solid rgba(255,255,255,0.1);
     }
 
-    .menu h2 {
-        margin-top: 0;
-    }
-
-    .menu p {
+    .sidebar button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        color: white;
         font-size: 14px;
-        line-height: 1.6;
+        cursor: pointer;
+        transition: 0.3s;
     }
 
-    /* CONTEÚDO */
-    .content {
-        flex: 1;
+    .sidebar button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0,198,255,0.6);
+    }
+
+    .main {
         padding: 30px;
+        overflow-y: auto;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
     }
 
     .card {
-        background: white;
+        background: rgba(255,255,255,0.05);
         padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: 0.3s;
     }
 
-    button {
-        padding: 10px 15px;
-        margin: 8px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(0,255,255,0.3);
     }
 
-    .btn {
-        background: #28a745;
-        color: white;
+    .card h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
-    .btn:hover {
-        background: #1e7e34;
+    .patients {
+        margin-top: 30px;
     }
 
-    .danger {
-        background: #dc3545;
-        color: white;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
     }
 
-    .danger:hover {
-        background: #a71d2a;
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
+
+    tr:hover {
+        background: rgba(255,255,255,0.05);
+    }
+
 </style>
 </head>
-
 <body>
 
-<!-- MENU ESQUERDO -->
-<div class="menu">
-    <h2>👨‍⚕️ Médico</h2>
-    <p>Dr. Ofrania Martinho</p>
-    <p>Clínica Geral</p>
-    <hr>
-    <p>✔ Pacientes<br>
-       ✔ Consultas<br>
-       ✔ Diagnósticos<br>
-       ✔ Histórico</p>
-</div>
+<header>
+    <h1>👨‍⚕️ Painel do Médico</h1>
+    <div>Dr. João</div>
+</header>
 
-<!-- CONTEÚDO PRINCIPAL -->
-<div class="content">
+<div class="container">
 
-    <h1>Painel do Médico</h1>
-
-    <div class="card">
-        <h3>Atalhos rápidos</h3>
-
-        <button class="btn" onclick="alert('Lista de pacientes')">Ver Pacientes</button>
-        <button class="btn" onclick="alert('Consultas do dia')">Consultas do Dia</button>
-        <button class="btn" onclick="alert('Adicionar diagnóstico')">Adicionar Diagnóstico</button>
-        <button class="btn" onclick="alert('Histórico')">Histórico</button>
+    <div class="sidebar">
+        <button>🏠 Dashboard</button>
+        <button>📅 Consultas</button>
+        <button>🧑‍🤝‍🧑 Pacientes</button>
+        <button>➕ Nova Consulta</button>
+        <button>⚙️ Configurações</button>
     </div>
 
-    <div class="card">
-        <h3>Sessão</h3>
-        <button class="danger" onclick="sair()">Sair</button>
+    <div class="main">
+
+        <div class="cards">
+            <div class="card">
+                <h2>Consultas Hoje</h2>
+                <p>12</p>
+            </div>
+
+            <div class="card">
+                <h2>Pacientes</h2>
+                <p>58</p>
+            </div>
+
+            <div class="card">
+                <h2>Emergências</h2>
+                <p>3</p>
+            </div>
+        </div>
+
+        <div class="patients">
+            <h2>Lista de Pacientes</h2>
+
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Estado</th>
+                </tr>
+
+                <tr>
+                    <td>Ana Silva</td>
+                    <td>30</td>
+                    <td>Estável</td>
+                </tr>
+
+                <tr>
+                    <td>Carlos Mendes</td>
+                    <td>45</td>
+                    <td>Crítico</td>
+                </tr>
+
+                <tr>
+                    <td>Maria João</td>
+                    <td>28</td>
+                    <td>Em análise</td>
+                </tr>
+            </table>
+        </div>
+
     </div>
 
 </div>
-
-<script>
-function sair(){
-    window.location.href = "login.html";
-}
-</script>
 
 </body>
 </html>
