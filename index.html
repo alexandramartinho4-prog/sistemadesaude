@@ -2,91 +2,86 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<title>Bem-vindo - Sistema de Saúde</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bem-vindo</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial;
-        background: #e6f7ff;
-        display: flex;
-        height: 100vh;
-    }
+body{
+ font-family: Arial, sans-serif;
+ background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+ color: white;
+ margin:0;
+ padding:20px;
+ min-height:100vh;
+}
 
-    
-    .left {
-        width: 30%;
-        background: #2c3e50;
-        color: white;
-        padding: 20px;
-    }
+h1{
+ text-align:center;
+ margin-bottom:20px;
+}
 
-    .left h2 {
-        margin-top: 0;
-    }
+p{
+ line-height:1.6;
+ margin-bottom:15px;
+}
 
-    .right {
-        flex: 1;
-        padding: 40px;
-    }
+ul{
+ margin-left:20px;
+ margin-bottom:20px;
+}
 
-    button {
-        padding: 10px 15px;
-        margin: 10px 5px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-    }
+button{
+ padding:10px 20px;
+ margin:10px;
+ border:none;
+ border-radius:5px;
+ background-color:#00c6ff;
+ color:white;
+ cursor:pointer;
+}
 
-    .enter {
-        background: #3498db;
-        color: white;
-    }
-
-    .info {
-        background: #1abc9c;
-        color: white;
-    }
+.center{
+ text-align:center;
+ margin-top:30px;
+}
 </style>
 </head>
-
 <body>
 
-<div class="left">
-    <h2>🏥 Sistema de Saúde</h2>
-    <p>Gestão hospitalar moderna</p>
+<h1>🏥 Seja Bem-vindo ao Sistema de Gestão de Saúde</h1>
 
-    <p>Pacientes<br>
-        Consultas<br>
-        Médicos<br>
-        Histórico clínico</p>
+<p>
+Seja bem-vindo ao nosso sistema. Aqui oferecemos uma plataforma moderna e simples para gerir todas as atividades relacionadas à saúde.
+</p>
+
+<p>
+O nosso sistema foi criado com o objetivo de melhorar o atendimento, tornar os processos mais rápidos e garantir uma melhor organização das informações.
+</p>
+
+<p>
+Com este sistema, é possível ter mais conforto, qualidade e eficiência no acompanhamento de pacientes e na gestão dos profissionais de saúde.
+</p>
+
+<ul>
+<li>✔ Agendamento de consultas de forma rápida</li>
+<li>✔ Acesso ao histórico de atendimentos</li>
+<li>✔ Gestão de pacientes e profissionais</li>
+<li>✔ Melhor organização dos dados</li>
+<li>✔ Atendimento mais eficiente</li>
+<li>✔ Interface simples e fácil de usar</li>
+</ul>
+
+<p>
+Este sistema foi desenvolvido pensando na inovação e na melhoria contínua dos serviços de saúde, proporcionando uma experiência mais organizada tanto para os profissionais quanto para os pacientes.
+</p>
+
+<div class="center">
+<p style="margin-bottom:10px; opacity:0.9;">
+Para aceder ao sistema, clique em "Entrar" e faça o login com as suas credenciais. Aqui terá acesso a todas as funcionalidades de gestão de saúde, consultas e acompanhamento de pacientes.
+</p>
+<button onclick="location.href='login.html'">Entrar</button>
+<button onclick="location.href='mais_informacoes.html'">Mais Informações</button>
 </div>
-
-<div class="right">
-    <h1>Bem-vindo</h1>
-
-    <p>
-        Este sistema foi criado para organizar serviços de saúde,
-        melhorar o atendimento e facilitar o acesso a informações médicas.
-    </p>
-
-    <p>
-        Aqui podes gerir consultas, pacientes e médicos de forma rápida e eficiente.
-    </p>
-
-    <button class="enter" onclick="entrar()">Entrar no Sistema</button>
-    <button class="info" onclick="info()">mais informações</button>
-</div>
-
-<script>
-function entrar(){
-    window.location.href = "login.html";
-}
-
-function info(){
-    window.location.href = "info.html";
-}
-</script>
 
 </body>
 </html>
