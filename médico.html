@@ -6,185 +6,111 @@
 <title>Painel do Médico</title>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', sans-serif;
-    }
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+padding:20px;
+}
 
-    body {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        color: white;
-        height: 100vh;
-    }
+h2{margin-bottom:20px}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+.container{
+max-width:900px;
+margin:auto;
+}
 
-    header h1 {
-        font-size: 24px;
-        letter-spacing: 1px;
-    }
+.card{
+background:rgba(255,255,255,0.08);
+padding:15px;
+border-radius:10px;
+margin-bottom:10px;
+}
 
-    .container {
-        display: grid;
-        grid-template-columns: 250px 1fr;
-        height: calc(100vh - 80px);
-    }
+button{
+padding:8px 12px;
+margin-top:8px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:#00c6ff;
+color:white;
+}
 
-    .sidebar {
-        background: rgba(0,0,0,0.3);
-        padding: 20px;
-        border-right: 1px solid rgba(255,255,255,0.1);
-    }
+button:hover{
+background:#0072ff;
+}
 
-    .sidebar button {
-        width: 100%;
-        padding: 12px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 10px;
-        background: linear-gradient(135deg, #00c6ff, #0072ff);
-        color: white;
-        font-size: 14px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+#ficha{
+margin-top:20px;
+padding:15px;
+background:rgba(255,255,255,0.08);
+border-radius:10px;
+min-height:100px;
+}
 
-    .sidebar button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(0,198,255,0.6);
-    }
-
-    .main {
-        padding: 30px;
-        overflow-y: auto;
-    }
-
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
-
-    .card {
-        background: rgba(255,255,255,0.05);
-        padding: 20px;
-        border-radius: 20px;
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255,255,255,0.1);
-        transition: 0.3s;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 20px rgba(0,255,255,0.3);
-    }
-
-    .card h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .patients {
-        margin-top: 30px;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-    }
-
-    th, td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    tr:hover {
-        background: rgba(255,255,255,0.05);
-    }
-
+hr{opacity:0.2;margin:10px 0}
 </style>
 </head>
-<body>
 
-<header>
-    <h1>👨‍⚕️ Painel do Médico</h1>
-    <div>Dr. João</div>
-</header>
+<body>
 
 <div class="container">
 
-    <div class="sidebar">
-        <button>🏠 Dashboard</button>
-        <button>📅 Consultas</button>
-        <button>🧑‍🤝‍🧑 Pacientes</button>
-        <button>➕ Nova Consulta</button>
-        <button>⚙️ Configurações</button>
-    </div>
+<h2>👨‍⚕️ Painel do Médico</h2>
 
-    <div class="main">
+<h3>📋 Pacientes</h3>
+<div id="lista"></div>
 
-        <div class="cards">
-            <div class="card">
-                <h2>Consultas Hoje</h2>
-                <p>12</p>
-            </div>
-
-            <div class="card">
-                <h2>Pacientes</h2>
-                <p>58</p>
-            </div>
-
-            <div class="card">
-                <h2>Emergências</h2>
-                <p>3</p>
-            </div>
-        </div>
-
-        <div class="patients">
-            <h2>Lista de Pacientes</h2>
-
-            <table>
-                <tr>
-                    <th>Nome</th>
-                    <th>Idade</th>
-                    <th>Estado</th>
-                </tr>
-
-                <tr>
-                    <td>Ana Silva</td>
-                    <td>30</td>
-                    <td>Estável</td>
-                </tr>
-
-                <tr>
-                    <td>Carlos Mendes</td>
-                    <td>45</td>
-                    <td>Crítico</td>
-                </tr>
-
-                <tr>
-                    <td>Maria João</td>
-                    <td>28</td>
-                    <td>Em análise</td>
-                </tr>
-            </table>
-        </div>
-
-    </div>
+<div id="ficha"></div>
 
 </div>
+
+<script>
+
+let pacientes = [
+{nome:"Ana Silva",idade:30,estado:"Estável",ultima:"10 Abril"},
+{nome:"Carlos Mendes",idade:45,estado:"Crítico",ultima:"12 Abril"},
+{nome:"Maria João",idade:28,estado:"Em observação",ultima:"18 Abril"}
+];
+
+let lista = document.getElementById("lista");
+
+pacientes.forEach(p=>{
+let div=document.createElement("div");
+div.className="card";
+div.innerHTML=`
+<b>${p.nome}</b><br>
+Idade: ${p.idade}<br>
+<button onclick="abrirFicha('${p.nome}')">Ver Ficha Completa</button>
+`;
+lista.appendChild(div);
+});
+
+function abrirFicha(nome){
+let p = pacientes.find(x=>x.nome===nome);
+
+document.getElementById("ficha").innerHTML=`
+<h3>🧾 Ficha Completa</h3>
+<p><b>Nome:</b> ${p.nome}</p>
+<p><b>Idade:</b> ${p.idade}</p>
+<p><b>Estado:</b> ${p.estado}</p>
+<p><b>Última consulta:</b> ${p.ultima}</p>
+
+<hr>
+<p>📋 Histórico:</p>
+<ul>
+<li>Consulta geral</li>
+<li>Exame de sangue</li>
+<li>Acompanhamento</li>
+</ul>
+
+<hr>
+<p>⚠ Resumo automático: paciente em acompanhamento regular.</p>
+`;
+}
+
+</script>
 
 </body>
 </html>
