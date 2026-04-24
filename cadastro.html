@@ -82,21 +82,17 @@
 
     <h2>Criar Conta</h2>
 
-    <form>
+    <input type="text" id="nome" placeholder="Nome completo" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="senha" placeholder="Senha" required>
 
-        <input type="text" placeholder="Nome completo" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Senha" required>
+    <select id="tipoUser" required>
+        <option value="">Selecione o tipo de usuário</option>
+        <option value="medico">Médico</option>
+        <option value="paciente">Paciente</option>
+    </select>
 
-        <select id="tipoUser" required>
-            <option value="">Selecione o tipo de usuário</option>
-            <option value="medico">Médico</option>
-            <option value="paciente">Paciente</option>
-        </select>
-
-        <button type="button" onclick="cadastrar()">Cadastrar</button>
-
-    </form>
+    <button type="button" onclick="cadastrar()">Cadastrar</button>
 
     <div class="link">
         <a href="login.html">Já tenho conta</a>
@@ -106,16 +102,35 @@
 
 <script>
 function cadastrar() {
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let senha = document.getElementById("senha").value;
     let tipo = document.getElementById("tipoUser").value;
 
-    if (tipo === "paciente") {
-        window.location.href = "paciente.html";
-    } 
-    else if (tipo === "medico") {
+    if (!nome || !email || !senha || !tipo) {
+        alert("Preenche todos os campos!");
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let novoUser = {
+        nome: nome,
+        email: email,
+        senha: senha,
+        tipo: tipo
+    };
+
+    users.push(novoUser);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Conta criada com sucesso!");
+
+    // redirecionamento correto (SEM ACENTOS)
+    if (tipo === "medico") {
         window.location.href = "medico.html";
-    } 
-    else {
-        alert("Escolhe o tipo de usuário");
+    } else {
+        window.location.href = "paciente.html";
     }
 }
 </script>
