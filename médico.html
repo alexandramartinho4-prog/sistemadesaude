@@ -6,50 +6,57 @@
 <title>Painel do Médico</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
-body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-padding:20px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif
 }
 
-h2{margin-bottom:20px}
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    padding:20px;
+}
+
+h2{
+    margin-bottom:20px
+}
 
 .container{
-max-width:900px;
-margin:auto;
+    max-width:900px;
+    margin:auto;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
-padding:15px;
-border-radius:10px;
-margin-bottom:10px;
+    background:rgba(255,255,255,0.08);
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
 }
 
 button{
-padding:8px 12px;
-margin-top:8px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-background:#00c6ff;
-color:white;
-}
-
-button:hover{
-background:#0072ff;
+    padding:8px 12px;
+    margin-top:8px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#00c6ff;
+    color:white;
 }
 
 #ficha{
-margin-top:20px;
-padding:15px;
-background:rgba(255,255,255,0.08);
-border-radius:10px;
-min-height:100px;
+    margin-top:20px;
+    padding:15px;
+    background:rgba(255,255,255,0.08);
+    border-radius:10px;
+    min-height:100px;
 }
 
-hr{opacity:0.2;margin:10px 0}
+hr{
+    opacity:0.2;
+    margin:10px 0
+}
 </style>
 </head>
 
@@ -64,6 +71,11 @@ hr{opacity:0.2;margin:10px 0}
 
 <div id="ficha"></div>
 
+<br>
+<button onclick="window.location.href='paciente.html'">
+    ⬅ Voltar ao Paciente
+</button>
+
 </div>
 
 <script>
@@ -77,37 +89,37 @@ let pacientes = [
 let lista = document.getElementById("lista");
 
 pacientes.forEach(p=>{
-let div=document.createElement("div");
-div.className="card";
-div.innerHTML=`
-<b>${p.nome}</b><br>
-Idade: ${p.idade}<br>
-<button onclick="abrirFicha('${p.nome}')">Ver Ficha Completa</button>
-`;
-lista.appendChild(div);
+    let div=document.createElement("div");
+    div.className="card";
+    div.innerHTML=`
+    <b>${p.nome}</b><br>
+    Idade: ${p.idade}<br>
+    <button onclick="abrirFicha('${p.nome}')">Ver Ficha Completa</button>
+    `;
+    lista.appendChild(div);
 });
 
 function abrirFicha(nome){
-let p = pacientes.find(x=>x.nome===nome);
+    let p = pacientes.find(x=>x.nome===nome);
 
-document.getElementById("ficha").innerHTML=`
-<h3>🧾 Ficha Completa</h3>
-<p><b>Nome:</b> ${p.nome}</p>
-<p><b>Idade:</b> ${p.idade}</p>
-<p><b>Estado:</b> ${p.estado}</p>
-<p><b>Última consulta:</b> ${p.ultima}</p>
+    document.getElementById("ficha").innerHTML=`
+    <h3>🧾 Ficha Completa</h3>
+    <p><b>Nome:</b> ${p.nome}</p>
+    <p><b>Idade:</b> ${p.idade}</p>
+    <p><b>Estado:</b> ${p.estado}</p>
+    <p><b>Última consulta:</b> ${p.ultima}</p>
 
-<hr>
-<p>📋 Histórico:</p>
-<ul>
-<li>Consulta geral</li>
-<li>Exame de sangue</li>
-<li>Acompanhamento</li>
-</ul>
+    <hr>
+    <p>📋 Histórico:</p>
+    <ul>
+        <li>Consulta geral</li>
+        <li>Exame de sangue</li>
+        <li>Acompanhamento</li>
+    </ul>
 
-<hr>
-<p>⚠ Resumo automático: paciente em acompanhamento regular.</p>
-`;
+    <hr>
+    <p>⚠ Resumo automático: paciente em acompanhamento regular.</p>
+    `;
 }
 
 </script>
