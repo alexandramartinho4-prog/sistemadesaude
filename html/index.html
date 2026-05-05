@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DS Company</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+body{background:#0b0f19;color:#e6e6e6;scroll-behavior:smooth;}
+
+header{
+position:fixed;top:0;left:0;width:100%;
+background:#0f172a;
+display:flex;justify-content:space-between;align-items:center;
+padding:12px 20px;
+z-index:999;
+box-shadow:0 2px 10px rgba(0,0,0,0.6);
+}
+
+header h1{color:#38bdf8;font-size:18px;}
+
+nav a{color:#ddd;text-decoration:none;margin:0 6px;font-size:11px;}
+nav a:hover{color:#38bdf8;}
+
+.hero{
+min-height:100vh;
+background:url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd53') center/cover;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h2{
+font-size:3rem;
+background:rgba(0,0,0,0.65);
+padding:15px 20px;
+border-radius:12px;
+}
+
+.hero p{
+max-width:1000px;
+background:rgba(0,0,0,0.65);
+padding:15px;
+margin-top:10px;
+border-radius:12px;
+line-height:1.7;
+}
+
+.section{
+padding:120px 30px;
+min-height:100vh;
+}
+
+.section h2{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+.section p{line-height:1.8;margin-bottom:10px;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:12px;
+margin-top:20px;
+}
+
+.card{
+background:#1f2937;
+padding:10px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{transform:scale(1.05);}
+
+.card img{
+width:100%;border-radius:10px;margin-top:8px;
+}
+
+.highlight{
+background:#111827;
+padding:15px;
+border-radius:12px;
+margin-top:15px;
+}
+
+footer{
+background:#0f172a;
+text-align:center;
+padding:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>DS Company</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#sobre">Sobre</a>
+<a href="#colecao">Coleção</a>
+<a href="#mulher">Mulher</a>
+<a href="#homem">Homem</a>
+<a href="#acessorios">Acessórios</a>
+<a href="#calcados">Calçados</a>
+<a href="#info">Info</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h2>DS COMPANY</h2>
+<p>
+A DS Company apresenta uma experiência completa de moda digital com uma grande variedade de roupas, acessórios e estilos modernos.
+O objetivo é proporcionar uma navegação clara, visual forte e uma estrutura organizada de produtos inspirados nas tendências atuais da moda global.
+Aqui o utilizador encontra desde roupas casuais até estilos mais sofisticados, com categorias bem definidas e apresentação visual forte.
+</p>
+<p>
+Explore coleções completas, descubra novas tendências e navegue por diferentes estilos organizados para facilitar a experiência do utilizador.
+</p>
+</section>
+
+<section class="section" id="sobre">
+<h2>Sobre a Plataforma</h2>
+<p>
+A DS Company foi criada como um sistema de demonstração de comércio digital de moda, com foco em organização de catálogo, design moderno e experiência visual.
+</p>
+<p>
+A plataforma simula um ambiente completo de loja online com categorias de produtos, navegação intuitiva e estrutura semelhante a grandes sistemas de e-commerce.
+</p>
+<div class="highlight">
+<p>Oferecemos diferentes estilos de roupa, desde moda urbana até roupas elegantes, com acessórios variados e calçados modernos.</p>
+<p>A plataforma está organizada para simular uma experiência real de navegação em loja digital.</p>
+</div>
+</section>
+
+<section class="section" id="colecao">
+<h2>Coleção Completa</h2>
+<div class="grid">
+<div class="card">Estilo Urbano<img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd53"></div>
+<div class="card">Moda Casual<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d"></div>
+<div class="card">Look Elegante<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38"></div>
+<div class="card">Street Style<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"></div>
+<div class="card">Tendência Atual<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246"></div>
+<div class="card">Moda Premium<img src="https://images.unsplash.com/photo-1518544801976-3e159e50e5bb"></div>
+<div class="card">Look Verão<img src="https://images.unsplash.com/photo-1582582494700-0b57c0d3bb57"></div>
+<div class="card">Estilo Moderno<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"></div>
+</div>
+</section>
+
+<section class="section" id="mulher">
+<h2>Moda Feminina</h2>
+<div class="grid">
+<div class="card">Vestidos<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d"></div>
+<div class="card">Blusas<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38"></div>
+<div class="card">Casacos<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38"></div>
+<div class="card">Acessórios<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a7f3c"></div>
+<div class="card">Óculos<img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083"></div>
+<div class="card">Bolsas<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3"></div>
+<div class="card">Sandálias<img src="https://images.unsplash.com/photo-1582582494700-0b57c0d3bb57"></div>
+<div class="card">Looks Casuais<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"></div>
+</div>
+</section>
+
+<section class="section" id="homem">
+<h2>Moda Masculina</h2>
+<div class="grid">
+<div class="card">T-Shirts<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"></div>
+<div class="card">Casacos<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38"></div>
+<div class="card">Jeans<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246"></div>
+<div class="card">Relógios<img src="https://images.unsplash.com/photo-1518544801976-3e159e50e5bb"></div>
+<div class="card">Sneakers<img src="https://images.unsplash.com/photo-1528701800489-20be3c63c0b8"></div>
+<div class="card">Street Wear<img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd53"></div>
+</div>
+</section>
+
+<section class="section" id="acessorios">
+<h2>Acessórios</h2>
+<div class="grid">
+<div class="card">Óculos<img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083"></div>
+<div class="card">Pulseiras<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a7f3c"></div>
+<div class="card">Carteiras<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"></div>
+<div class="card">Chapéus<img src="https://images.unsplash.com/photo-1514996937319-344454492b37"></div>
+</div>
+</section>
+
+<section class="section" id="calcados">
+<h2>Calçados</h2>
+<div class="grid">
+<div class="card">Sneakers<img src="https://images.unsplash.com/photo-1528701800489-20be3c63c0b8"></div>
+<div class="card">Sandálias<img src="https://images.unsplash.com/photo-1582582494700-0b57c0d3bb57"></div>
+<div class="card">Tênis Urbano<img src="https://images.unsplash.com/photo-1528701800489-20be3c63c0b8"></div>
+</div>
+</section>
+
+<section class="section" id="info">
+<h2>Informações Gerais</h2>
+<p>
+A DS Company organiza todo o seu catálogo de forma estruturada para simular uma experiência real de navegação em loja digital.
+</p>
+<p>
+Cada categoria é pensada para representar diferentes estilos de moda e facilitar a exploração dos produtos.
+</p>
+</section>
+
+<section class="section" id="contacto">
+<h2>Contacto</h2>
+<p>Email: dscompany@email.com</p>
+<p>Telefone: +244 900 000 000</p>
+<p>Suporte disponível 24/7</p>
+</section>
+
+<footer>
+<p>© 2026 DS Company - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
